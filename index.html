@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIWES Assumption of Duty Form 2024</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height:100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 700px;
+            position: relative;
+        }
+        .logo {
+            position: absolute;
+            top: 30px;
+            left: 10px;
+            width: 150px;
+            height: 130px;
+            background-image: url('eksu.jpg'); /* Replace with your school logo */
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 0px;
+	}
+	h3 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+
+        }
+        form {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 10px;
+            align-items: center;
+        }
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+        input, select, textarea {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        textarea {
+            grid-column: 2;
+        }
+        input[type="submit"] {
+            grid-column: 2 / -1;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                width: 95%;
+            }
+            .logo {
+                width: 150px;
+                height: 130px;
+            }
+            form {
+                grid-template-columns: 1fr;
+            }
+            textarea {
+                grid-column: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo"></div>
+        <h2>Ekiti State University, Ado Ekiti, Ekiti State</h2>
+        <h2>SIWES UNIT</h2>
+        <h3>SIWES Assumption of Duty Form 2024</h3>
+        <form action="submit_form.php" method="POST">
+            <label for="name">Name of Student (Capital Letters) *</label>
+            <input type="text" id="name" name="name" required style="text-transform: uppercase;">
+
+            <label for="matric">Matriculation Number *</label>
+            <input type="text" id="matric" name="matric" required>
+
+            <label for="phone">Student Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="student_email">Student E-mail Address *</label>
+            <input type="email" id="student_email" name="student_email" required>
+
+            <label for="faculty">Faculty *</label>
+            <input type="text" id="faculty" name="faculty" required>
+
+            <label for="department">Department (State Option for SLT Department) *</label>
+            <input type="text" id="department" name="department" required>
+
+            <label for="assumption_date">Date of Assumption of IT *</label>
+            <input type="date" id="assumption_date" name="assumption_date" required>
+
+            <label for="it_state">Name of State where IT is carried out  (e.g. Ekiti, Ogun, Oyo, Kaduna, Gombe etc) *</label>
+            <input type="text" id="it_state" name="it_state" required>
+
+            <label for="establishment">Name and Full Address of Establishment where IT is carried out *</label>
+            <textarea id="establishment" name="establishment" rows="3" required></textarea>
+
+            <label for="establishment_phone">Phone Number of Establishment *</label>
+            <input type="tel" id="establishment_phone" name="establishment_phone" required>
+
+            <label for="establishment_email">Establishment E-mail Address *</label>
+            <input type="email" id="establishment_email" name="establishment_email" required>
+
+            <label for="supervisor_name">Name of Industrial-Based Supervisor *</label>
+            <input type="text" id="supervisor_name" name="supervisor_name" required>
+
+            <label for="supervisor_phone">Phone Number of Industrial Based Supervisor *</label>
+            <input type="tel" id="supervisor_phone" name="supervisor_phone" required>
+
+            <input type="submit" value="Submit Form">
+        </form>
+    </div>
+</body>
+</html>
